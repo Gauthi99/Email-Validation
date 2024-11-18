@@ -46,8 +46,8 @@
             }
 
             try {
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbxfln2m38lOMiKjE2G_9EkX3Y4ebKd5T0cGXn5YTtcjV7Mr7rmTBUE6ivyMsFEu5OR4ww/exec';
-                const response = await fetch(`${scriptURL}?email=${encodeURIComponent(email)}`); 
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwEhJkQkhw2Lpo4LgR8qVacDDXHmvSYZCMMqFqroTbFexppBDUuGSoKXh8bLgW8LcJFLA/exec'; // Replace YOUR_DEPLOYMENT_ID with your actual deployment ID
+                const response = await fetch(`${scriptURL}?email=${encodeURIComponent(email)}`);
                 const result = await response.json();
 
                 if (result.registered) {
@@ -64,11 +64,6 @@
                 messageDiv.style.color = 'red';
                 nextButton.disabled = true;
             }
-        }
-
-        function startQuiz() {
-            // Redirect to the quiz
-            window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSfL2S02zkmYfLEiHUW4SYw9iy4UAmgX0NygkJfKEexSCS7-zg/viewform'; // Replace YOUR_FORM_ID with your actual Google Form ID
         }
     </script>
 </head>
